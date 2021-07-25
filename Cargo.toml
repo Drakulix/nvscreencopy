@@ -1,0 +1,27 @@
+[package]
+name = "nvscreencopy"
+version = "0.1.0"
+authors = ["Victor Brekenfeld <github@drakulix.de>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = "2.3"
+nix = "0.21"
+smithay = { version = "0.3", default-features = false, features = ["backend_drm", "backend_egl", "backend_udev", "renderer_gl", "wayland_frontend", "slog-stdlog"] }
+smithay-client-toolkit = "0.14.0"
+wayland-client = "0.28"
+wayland-commons = "0.28"
+calloop = "0.9.0"
+slog = { version = "2.1.1", features = ["release_max_level_info"] }
+slog-term = "2.8"
+slog-async = "2.2"
+slog-stdlog = "4.1.0"
+slog-scope = "4.4.0"
+
+anyhow = "1.0"
+
+[build-dependencies]
+gl_generator = "0.14"
+wayland-scanner = "0.28"
