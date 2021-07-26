@@ -36,6 +36,9 @@ Because nvscreencopy is the only process requesting kms capabilities of the nvid
 
 # How do I use this
 
+Make sure the nvidia driver is loaded with modeset support:
+`sudo modprobe nvidia-drm modeset=1` (To set this up automatically refer to your distributions documentation.)
+
 ```
 $ ./nvscreencopy --help
 
